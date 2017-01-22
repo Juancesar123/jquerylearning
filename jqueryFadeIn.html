@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Latihan Jquery</title>
+      
+        <style>
+        .box-hejo{
+            background-color: green;
+            width:200;
+            height: 200;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="box-hejo">
+            JQUERY
+        </div>
+        <button id="muncul">Munculkan</button>
+        <button id="hilang">Hilangkan</button>
+        <button id="toogle">Click</button>
+        <button id="fadeto">FadeTo effect</button>
+    </body>
+        <script src="jquery-3.1.1.min.js"></script>
+        <script>
+            $("document").ready(function(){
+                $("#muncul").click(function(){
+                    $(".box-hejo").fadeIn(3000)
+                })
+                 $("#hilang").click(function(){
+                    $(".box-hejo").fadeOut(3000);
+                })
+                $("#toogle").click(function(){
+                    $(".box-hejo").fadeToggle(3000);
+                })
+                $("#fadeto").click(function(){
+                    $(".box-hejo").fadeTo(3000,0.4,"linear");
+                })
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Latihan Jquery</title>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>nama :</td>
+                <td><input type="text" id="nama"></td>
+            </tr>
+            <tr>
+                <td>Alamat :</td>
+                <td><textarea id="alamat"></textarea></td>
+            </tr>
+        </table>
+         <button id="clickme">Click Me!</button>
+        <script src="jquery-3.1.1.min.js"></script>
+        <script>
+            $("document").ready(function(){
+                $("#clickme").click(function(){
+                    $("table").hide("slow", function(){
+                         alert("The table is now Form Input is now hidden");
+                     });
+                })
+            })
+        </script>
+    </body>
+</html>

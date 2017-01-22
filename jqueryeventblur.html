@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Latihan Jquery</title>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>nama :</td>
+                <td><input type="text" id="nama"></td>
+            </tr>
+            <tr>
+                <td>Alamat :</td>
+                <td><textarea id="alamat"></textarea></td>
+            </tr>
+        </table>
+        <script src="jquery-3.1.1.min.js"></script>
+        <script>
+            $("document").ready(function(){
+                $("input").blur(function(){
+                    console.log("hello welcome");
+                })
+            })
+        </script>
+    </body>
+</html>

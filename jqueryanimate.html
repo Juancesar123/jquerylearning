@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Latihan Jquery</title>
+      
+        <style>
+        .box-hejo{
+            background-color: green;
+            width:200;
+            height: 200;
+            position: relative;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="box-hejo">
+            JQUERY
+        </div>
+        <button id="kiri">Gerakan Kotak(kiri)</button>
+        <button id="kanan">Gerakan Kotak(kanan)</button>
+        <button id="tengah">Gerakan Kotak(tengah)</button>
+        <button id="besar">Perbesar Kotak</button>
+        <button id="toggle">Gerakan Kotak(toggle)</button>
+        <button id="chaining">Method Chaining</button>
+    </body>
+        <script src="jquery-3.1.1.min.js"></script>
+        <script>
+            $("document").ready(function(){
+                $("#kiri").click(function(){
+                    $(".box-hejo").animate({
+                        left:"300px"
+                    });
+                })
+                 $("#kanan").click(function(){
+                    $(".box-hejo").animate({
+                        right:"300px"
+                    });
+                })
+                 $("#tengah").click(function(){
+                    $(".box-hejo").animate({
+                        left: '250px',
+                        opacity: '0.5',
+                        height: '150px',
+                        width: '150px'
+                    });
+                })
+                $("#besar").click(function(){
+                    $(".box-hejo").animate({
+                        left: '250px',
+                        height: '+=150px',
+                        width: '+=150px'
+                    });
+                })
+                 $("#toggle").click(function(){
+                    $(".box-hejo").animate({
+                        height: 'toggle'
+                    });
+                })
+                 $("#chaining").click(function(){
+                    $(".box-hejo")
+                    .css("background-color", "red")
+                    .slideUp(2000)
+                    .slideDown(2000);
+                })
+               
+            })
+        </script>
+    </body>
+</html>

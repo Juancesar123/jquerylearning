@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Latihan Jquery</title>
+    </head>
+    <body>
+        <div class="box">
+            <p>Jquery</p>
+        </div>
+        <button id="clickme">Click saya!</button>
+        <button id="multiple">Multiple Css</button>
+    </body>
+        <script src="jquery-3.1.1.min.js"></script>
+        <script>
+            $("document").ready(function(){
+                $("#clickme").click(function(){
+                    $(".box").css("background-color","green");
+                })
+                $("#multiple").click(function(){
+                    $(".box").css({"background-color": "yellow", "font-size": "200%"});
+                })
+            })
+        </script>
+    </body>
+</html>

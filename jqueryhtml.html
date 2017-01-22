@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Latihan Jquery</title>
+    </head>
+    <body>
+        <span class="ganti">Ini Pesan Default</span>
+        <button id="btn1">Set Text</button>
+        <button id="btn2">Set HTML</button>
+    </body>
+        <script src="jquery-3.1.1.min.js"></script>
+        <script>
+            $("document").ready(function(){
+                $("#btn1").click(function(){
+                    $(".ganti").text("web programming its fun");
+                })
+               $("#btn2").click(function(){
+                    $(".ganti").html("<b>web programming its fun</b>");
+                })
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Latihan Jquery</title>
+    </head>
+    <body>
+            <button id="clickme">Click saya!</button>
+            <button id="get">Get Data!</button>
+            <div id="text">
+                ini default
+            </div>
+        <script src="jquery-3.1.1.min.js"></script>
+        <script>
+            $("document").ready(function(){
+                $("#clickme").click(function(){
+                   $("#text").load("hello.txt")
+                })
+                $("#get").click(function(){
+                   $.ajax({
+                       method:"GET",
+                       url:"hello.txt",
+                       success:function(data){
+                           $("#text").text(data)
+                       }
+                   })
+                })
+            })
+        </script>
+    </body>
+</html>

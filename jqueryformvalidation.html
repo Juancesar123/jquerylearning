@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Latihan Jquery</title>
+        <style>
+            form .error {
+                color: #ff0000;
+            }
+        </style>
+    </head>
+    <body>
+        <form id="formpengisian" name="" method="GET"  action="">
+        <table>
+            <tr>
+                <td>nama :</td>
+                <td><input type="text" id="nama" class="required" minlength="4"></td>
+            </tr>
+            <tr>
+                <td>Alamat :</td>
+                <td><textarea id="alamat" class="required"></textarea></td>
+            </tr>
+             <tr>
+                <td>Jenis Kelamin :</td>
+                <td><select id="jenis">
+                        <option value="laki-laki">Laki-Laki</option>
+                        <option value="perempuan">perempuan</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        </form>
+        <button type="submit">Submit Form</button>
+        <script src="jquery-3.1.1.min.js"></script>
+        <script src="jquery.validate.min.js"></script>
+        <script>
+            $("document").ready(function(){
+                $("#formpengisian").validate({
+                    rules: {
+                        nama: "required",
+                        alamat:"required",
+                        jenis:"required"
+                     },
+                     submitHandler: function(form) {
+                         form.submit();
+                     }
+                })
+            })
+        </script>
+    </body>
+</html>
